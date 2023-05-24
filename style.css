@@ -1,6 +1,7 @@
 :root {
     font-size: 62.5%;
     --primary-color: #00395F;
+    --secondary-color: #e4e4e4;
 }
 
 * {
@@ -14,20 +15,57 @@
 body {
     font-size: 1.6rem;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
 }
 
 .grid-container {
-  width: 100vw;
+  width: 100%;
 }
 
 .left-side {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
   text-align: center;
   padding: 1.5rem;
   background-color: var(--primary-color);
   color: #e4e4e4;
+}
+
+.left-side section {
+  padding-bottom: 2rem;
+  border-bottom: .2rem solid #e4e4e4;
+}
+
+.left-side section:last-child {
+  border-bottom: none;
+}
+
+.left-side li {
+  list-style: none;
+  margin: 1.5rem;
+}
+
+.about p, .languages p{
+  text-align: justify;
+  margin-top: 1.5rem;
+}
+
+.contact li, .skills li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #e4e4e4;
+  transition: all .2s linear;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: #aaccff;
 }
 
 .photo img {
@@ -39,11 +77,70 @@ body {
 
 .photo h1 {
   font-size: 3.2rem;
+  margin-bottom: 1.5rem;
 }
 
-@media screen and (min-width: 768px) {
-    .grid-container {
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 1.5rem;
+  background-color: #e4e4e4;
+  color: #00263f;
+}
+
+.right-side section div{
+  padding-left: 3.5rem;
+  margin-left: 2rem;
+  border-left: .3rem solid #00263f;
+}
+
+.right-side h1 {
+  display: none;
+}
+
+.right-side section i {
+  font-size: 2rem;
+  transform: translate(0%, 30%);
+  color: #e4e4e4;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.right-side section h2 {
+  margin-bottom: 1rem;
+}
+
+.educations div .education{
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+@media screen and (min-width: 768px) {  
+  .grid-container {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
+  }
+
+  #mobile-name {
+    display: none;
+  }
+
+  .photo img {
+    width: 80%;
+  }
+
+  .right-side {
+    gap: 1rem;
+    padding: 3rem 4rem;
+  }
+
+  .right-side h1 {
+    display: inline;
+    text-align: center;
+    font-size: 4rem;
   }
 }
