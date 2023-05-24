@@ -1,6 +1,6 @@
 :root {
     font-size: 62.5%;
-    --primary-color: #00395F;
+    --primary-color: #00111d;
     --secondary-color: #e4e4e4;
 }
 
@@ -15,77 +15,120 @@
 body {
     font-size: 1.6rem;
     font-family: Arial, Helvetica, sans-serif;
-    width: 100vw;
 }
 
 .grid-container {
-  width: 100%;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, rgba(0,17,29,1) 0%, rgb(0, 12, 54) );
 }
 
 .left-side {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  text-align: center;
+  align-items: center;
+  gap: 3rem;
+  width: 50%;
   padding: 1.5rem;
-  background-color: var(--primary-color);
+  margin: 1.5rem;
   color: #e4e4e4;
-}
-
-.left-side section {
-  padding-bottom: 2rem;
-  border-bottom: .2rem solid #e4e4e4;
-}
-
-.left-side section:last-child {
-  border-bottom: none;
 }
 
 .left-side li {
   list-style: none;
-  margin: 1.5rem;
 }
 
-.about p, .languages p{
-  text-align: justify;
-  margin-top: 1.5rem;
+.left-side section {
+  text-align: left;
+  width: 100%;
 }
 
-.contact li, .skills li {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.contact a {
+adress a {
   text-decoration: none;
   color: #e4e4e4;
   transition: all .2s linear;
 }
 
-.contact a:hover {
+adress a:hover {
   text-decoration: underline;
   color: #aaccff;
 }
 
+.photo {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
 .photo img {
-  width: 30rem;
+  width: 45%;
+  height: auto;
   border-radius: 50%;
-  border: .5rem solid #e4e4e4;
+  border: .1rem solid #000f38;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
 }
 
 .photo h1 {
   font-size: 3.2rem;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 }
 
+.left-side button {
+  padding: 1rem;
+  width: 100%;
+  margin: 2rem 0rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  border-radius: .5rem;
+  outline: none;
+  background-color: #e4e4e4;
+  border: none;
+  font-weight: bold;
+  transition: background .1s ease-out;
+}
+
+.left-side button:hover {
+  background-color: #bfbfbf;
+}
+
+.left-side section h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact ul{
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  margin-top: 1rem;
+}
+
+.contact ul li {
+  margin: 0rem 0;
+}
+
+.contact ul li i{
+  font-size: 3rem;
+}
+
+.skills ul{
+  display: flex;
+  gap: 1rem;
+}
+
+.skills img {
+  width:10rem;
+  cursor: pointer;
+}
 
 .right-side {
   display: flex;
   flex-direction: column;
+  height: 98vh;
+  width: 60%;
   gap: 4rem;
   padding: 1.5rem;
+  margin: .8rem;
   background-color: #e4e4e4;
   color: #00263f;
 }
@@ -94,10 +137,6 @@ body {
   padding-left: 3.5rem;
   margin-left: 2rem;
   border-left: .3rem solid #00263f;
-}
-
-.right-side h1 {
-  display: none;
 }
 
 .right-side section i {
@@ -119,28 +158,49 @@ body {
   gap: .2rem;
 }
 
-@media screen and (min-width: 768px) {  
-  .grid-container {
-    display: grid;
-    grid-template-columns: 40% 60%;
-  }
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50rem;
+  padding: 2rem;
+  background-color: #e4e4e4;
+  border: .5rem solid #001947;
+  border-radius: 2rem;
+  font-size: 2rem;
+  outline: none;
+  color: #000f38;
+}
 
-  #mobile-name {
-    display: none;
-  }
+.modal::backdrop {
+  background-color: #e4e4e43d;
+}
 
-  .photo img {
-    width: 80%;
-  }
+.modal div {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .right-side {
-    gap: 1rem;
-    padding: 3rem 4rem;
-  }
+.modal i {
+  font-size: 2.5rem;
+  transition: all .1s ease-in;
+  color: #000f38;
+}
 
-  .right-side h1 {
-    display: inline;
-    text-align: center;
-    font-size: 4rem;
-  }
+.modal i:hover {
+  transform: translate(.3rem);
+  font-size: 3rem;
+  color: #0c1e50;
+}
+
+.modal a {
+  outline: none;
+  color: #000f38;
+  text-decoration: none;
+}
+
+.modal a:hover {
+  color: #0c1e50;
+  text-decoration: underline;
 }
