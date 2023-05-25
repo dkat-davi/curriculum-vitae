@@ -75,25 +75,6 @@ body::-webkit-scrollbar {
   margin: 1.5rem 0;
 }
 
-.left-side button {
-  padding: 1rem;
-  width: 100%;
-  margin: 2rem 0rem;
-  margin-bottom: 0;
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  border-radius: .5rem;
-  outline: none;
-  background-color: #e4e4e4;
-  border: none;
-  font-weight: bold;
-  transition: background .1s ease-out;
-}
-
-.left-side button:hover {
-  background-color: #bfbfbf;
-}
-
 .left-side section h2 {
   margin-bottom: 1rem;
 }
