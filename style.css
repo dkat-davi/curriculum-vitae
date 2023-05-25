@@ -19,8 +19,8 @@ body {
 
 .grid-container {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(45deg, rgba(0,17,29,1) 0%, rgb(0, 12, 54) );
 }
 
@@ -28,10 +28,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   width: 50%;
   padding: 1.5rem;
-  margin: 1.5rem;
+  margin: 0 1.5rem 0 1.5rem;
   color: #e4e4e4;
 }
 
@@ -44,26 +44,16 @@ body {
   width: 100%;
 }
 
-adress a {
-  text-decoration: none;
-  color: #e4e4e4;
-  transition: all .2s linear;
-}
-
-adress a:hover {
-  text-decoration: underline;
-  color: #aaccff;
-}
-
 .photo {
   width: 100%;
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
 .photo img {
-  width: 45%;
-  height: auto;
+  width: 30rem;
+  height: 30rem;
   border-radius: 50%;
   border: .1rem solid #000f38;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
@@ -78,6 +68,7 @@ adress a:hover {
   padding: 1rem;
   width: 100%;
   margin: 2rem 0rem;
+  margin-bottom: 0;
   font-size: 1.5rem;
   color: var(--primary-color);
   border-radius: .5rem;
@@ -93,8 +84,26 @@ adress a:hover {
 }
 
 .left-side section h2 {
-  font-size: 3rem;
   margin-bottom: 1rem;
+}
+
+adress a {
+  text-decoration: none;
+  color: #e4e4e4;
+  transition: all .2s linear;
+}
+
+adress a:hover {
+  text-decoration: underline;
+  color: #aaccff;
+}
+
+.about {
+  width: 50%;
+}
+
+.about p {
+  line-height: 2.5rem;
 }
 
 .contact ul{
@@ -108,7 +117,7 @@ adress a:hover {
 }
 
 .contact ul li i{
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .skills ul{
@@ -117,7 +126,7 @@ adress a:hover {
 }
 
 .skills img {
-  width:10rem;
+  width:5rem;
   cursor: pointer;
 }
 
@@ -125,9 +134,9 @@ adress a:hover {
   display: flex;
   flex-direction: column;
   height: 98vh;
-  width: 60%;
-  gap: 4rem;
+  width: 50%;
   padding: 1.5rem;
+  padding-top: 0;
   margin: .8rem;
   background-color: #e4e4e4;
   color: #00263f;
@@ -149,7 +158,57 @@ adress a:hover {
 }
 
 .right-side section h2 {
-  margin-bottom: 1rem;
+  margin-bottom: .3rem;
+}
+
+.experience, .competition {
+  margin-bottom: .5rem;
+  margin-left: 1rem;
+}
+
+.experience a {
+  color: #00111d;
+  text-decoration: none;
+  transition: color .1s ease-in;
+}
+
+.experience a:hover {
+  color: #033796;
+  text-decoration: underline;
+}
+
+.personality tbody tr th, .personality tbody tr td {
+  border: .3rem solid #091842;
+  padding: .8rem 1rem;
+  border-radius: .4rem;
+}
+
+.personality tbody tr th {
+  background-color: #000f38;
+  color: #e4e4e4;
+}
+
+.personality tbody tr td {
+  width: 20%;
+}
+
+.personality tbody tr td:hover {
+  background-color: #bfd0ff;
+}
+
+.personality p {
+  margin-top: .5rem;
+}
+
+.personality a {
+  color: #00111d;
+  text-decoration: none;
+  transition: color .1s ease-in;
+}
+
+.personality a:hover {
+  color: #033796;
+  text-decoration: underline;
 }
 
 .educations div .education{
